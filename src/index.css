@@ -1,0 +1,237 @@
+:root {
+  font-family: Karla, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: #293264;
+  background-color: #f5f7fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* START - Styles for the Intro Component */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  height: 80vh;
+  width: 100%;
+}
+
+.intro__text {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #293264;
+}
+
+.description {
+  margin-bottom: 10px;
+}
+
+.quizType__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* END - Styles for the Intro Component */
+
+/* START - Styles for the Questions Component */
+
+.questionElements__container {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  max-height: 70vh;
+}
+
+.result__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* END - Styles for the Questions Component */
+
+/* START - Styles for the Question Component */
+
+.all__answers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.question__container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.question__container h2 {
+  font-size: 1.2rem;
+  margin: 0 0 15px;
+  color: #293264;
+}
+
+/* END - Styles for the Question Component */
+
+/* START - Styles for the QuizTypeOptions Component */
+
+.select__container {
+  margin-bottom: 1.1em;
+  width: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.custom__select {
+  border: 0;
+  width: 100%;
+  height: 3em;
+  padding: 0 1em 0 1em;
+  color: #293264;
+  border-radius: 0.25em;
+  cursor: pointer;
+  font-size: large;
+  transition: box-shadow 0.3s;
+}
+
+.custom__select:hover {
+  box-shadow: 0 0 0.6em 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom__label {
+  font-size: 1.1em;
+  font-weight: 700;
+  margin-right: 1.5em;
+  width: 250px;
+}
+
+/* END - Styles for the QuizTypeOptions Component */
+
+/* START - Styles for the Choices, Answers, Button, Score */
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s 0.1s;
+  margin-bottom: 20px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.answer {
+  background-color: #f5f7fb;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.answer:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+#correct.answer {
+  background-color: #94d7a2;
+  border: 1px solid #94d7a2;
+}
+
+#incorrect.answer.selected {
+  background-color: #f8bcbc;
+  border: 1px solid #f8bcbc;
+}
+
+#not-selected.answer {
+  color: rgba(41, 50, 100, 0.4);
+  border: 1px solid rgba(41, 50, 100, 0.4);
+}
+
+.score {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #293264;
+}
+
+/* END - Styles for the Choices, Answers, Button, Score */
+
+/* Responsive */
+
+@media screen and (max-width: 600px) {
+  .intro {
+    height: auto;
+    padding: 10px;
+  }
+
+  .quizType__container {
+    max-width: 90%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .questionElements__container {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+
+  .custom__label {
+    font-size: 1rem;
+    width: 100%;
+    margin-right: 0.5em;
+  }
+
+  .custom__select {
+    height: 2.5em;
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.5em;
+  }
+
+  .button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+}
