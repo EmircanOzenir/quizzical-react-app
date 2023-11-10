@@ -1,6 +1,9 @@
+import { decode } from 'html-entities';
+
 const Question = (props) => {
-  const answers = props.question.answers;
-  const questions = props.question.question;
+  const answers = props.question.answers ? decode(props.question.answers) : '';
+  const questions = props.question.question ? decode(props.question.question) : '';
+
 
   function handleClick(answer) {
     if (props.question.checked) {
